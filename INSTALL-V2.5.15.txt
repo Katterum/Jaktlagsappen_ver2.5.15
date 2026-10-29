@@ -1,0 +1,16 @@
+KATTERUMS JAKTLAG v2.5.15 - KORRIGERAD CACHELADDNING
+
+Orsak till felet:
+- index.html laddade fortfarande app.js och cloud.js med cachemarkeringen v=2510.
+- service worker anvande fortfarande cache-namnet och fillistan fran v2.5.10.
+- apphuvudet kunde darfor visa en ny version medan webblasaren fortfarande korde aldre kod.
+
+Rattat:
+- Webblasarflik: 2.5.15.
+- app.js, cloud.js och style.css laddas med v=2515.
+- Ny service-worker-cache jaktlaget-v2515-cachefix-20261029.
+
+Inga funktionsandringar:
+- Observationsstatistik fran v2.5.12 ar orord.
+- Jaktsynken fran v2.5.14 ar orord.
+- Ingen SQL ska koras.
